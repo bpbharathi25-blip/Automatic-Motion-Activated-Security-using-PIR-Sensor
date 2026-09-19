@@ -60,10 +60,29 @@ Step 7: Save Your Work
 
 
 # Code:
-
-
-
+```c
+int buttonState = 0;
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+void loop()
+{
+  buttonState = digitalRead(2);
+  if (buttonState == HIGH)
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  {
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(10);
+}
+```
 # Output:
+<img width="899" height="1599" alt="WhatsApp Image 2026-09-19 at 10 38 49 AM" src="https://github.com/user-attachments/assets/2413b1fd-34f9-4bf6-95a5-b86cb707d822" />
 
 
 
